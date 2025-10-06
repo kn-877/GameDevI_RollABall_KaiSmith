@@ -29,4 +29,9 @@ public class playercontroller : MonoBehaviour
 
         rb.AddForce(movement * speed);
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        other.gameObject.SetActive(false);
+    }
 }
